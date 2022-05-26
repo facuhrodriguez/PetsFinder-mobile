@@ -83,7 +83,7 @@ Widget _userTextField() {
           keyboardType: TextInputType.name,
           decoration: const InputDecoration(
               icon: Icon(Icons.person),
-              hintText: 'userName',
+              hintText: 'Nombre',
               labelText: 'Nombre de usuario'),
           onChanged: (value) {},
         ),
