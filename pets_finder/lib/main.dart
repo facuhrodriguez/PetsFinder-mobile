@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pets_finder/pages/login.dart';
+import 'router.dart' as router;
 
 void main() {
   runApp(const MyApp());
@@ -11,17 +12,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'MascotApp',
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-        primarySwatch: Colors.blue,
-      ),
-      initialRoute: LoginPage.id,
-      routes: {
-        LoginPage.id: (context) => const LoginPage(),
-      },
+      onGenerateRoute: router.generateRoute,
+      home: LoginPage(),
     );
   }
 }
